@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ToDoStore from './stores/toDoStore'
-import Modal from 'react-bootstrap'
 import ToDoActions from './actions/toDoActions'
 
 

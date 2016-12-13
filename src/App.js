@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ToDoInput from "./ToDoInput"
-import './App.css';
 
 const App = () => {
     return (

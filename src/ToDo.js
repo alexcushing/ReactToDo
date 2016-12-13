@@ -10,9 +10,7 @@ class ToDo extends Component {
 
   render() {
     return (
-      <div className="ToDoItem">
-        <li>{this.props.todo}</li>
-      </div>
+        <li className="eachItem">{this.props.todo}</li>
     );
   }
 }

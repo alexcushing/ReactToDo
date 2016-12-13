@@ -39,10 +39,12 @@ class ToDoInput extends Component {
   render() {
     return (
       <div className="ToDoInput">
+        <h2>To Do List</h2>
         <form onSubmit={this.updateTodo}>
           <input type="text" onChange={this.liveAdd} value={this.state.current}/>
-          <button type="submit">Submit</button>
+          <button type="submit" className="btn">Submit</button>
         </form>
+        <ul className="toDoListUnordered">
         {
          this.state.list.map((todo) => {
              return (
@@ -50,6 +52,7 @@ class ToDoInput extends Component {
              );
          })
      }
+   </ul>
       </div>
     );
   }

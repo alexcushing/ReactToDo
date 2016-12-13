@@ -15,33 +15,31 @@ class ToDoStore {
   }
 
   handleLiveUpdate(value){
-    this.state.current = value;
-    console.log("value state: ", this.state.current)
+    this.setState({current : value})
   }
     setVal(value){
         console.log("in store")
   }
     
     handlelEdit(value){
-      this.state.list.splice(value[1], 1, value[0])
-      console.log("store val: ", value[0])
-      console.log(value)
+      let myList = this.state.list
+      myList.splice(value[1], 1, value[0])
+      this.setState({list : myList})
     }
 
   handleUpdateList(value) {
-    console.log("pre list: " + this.state.list);
     let currArray = []
     currArray.push(value)
-    this.state.list.push(value)
-    this.state.current = ""
-    console.log("list: " + this.state.list);
+    let myList = this.state.list
+    myList.push(value)
+    this.setState({list : myList})
+    this.setState({current : ""})
   }
 
   handleDelete(value){
-       console.log("store" + value)
-      this.state.list.splice(value, 1)
-      console.log(this.state.list)
-        console.log(value);
+      let myList = this.state.list
+      myList.splice(value, 1)
+      this.setState({list : myList})
   }
 }
 

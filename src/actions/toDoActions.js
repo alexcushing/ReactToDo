@@ -7,6 +7,9 @@ class ToDoActions {
   updateLive(value) {
     return value;
   }
+  deleteToDo(value) {
+    return value;
+  }
 
 }
 

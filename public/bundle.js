@@ -21551,6 +21551,7 @@
 	    _this.onChange = _this.onChange.bind(_this);
 	    _this.updateTodo = _this.updateTodo.bind(_this);
 	    _this.liveAdd = _this.liveAdd.bind(_this);
+	    _this.delItem = _this.delItem.bind(_this);
 	    return _this;
 	  }
 
@@ -21584,8 +21585,16 @@
 	      _toDoActions2.default.updateToDo(val);
 	    }
 	  }, {
+	    key: 'delItem',
+	    value: function delItem(e) {
+	      console.log("in delete", this.props.index);
+	      _toDoActions2.default.deleteToDo("test");
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
+	      var _this2 = this;
+
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'ToDoInput' },
@@ -21607,8 +21616,17 @@
 	        _react2.default.createElement(
 	          'ul',
 	          { className: 'toDoListUnordered' },
-	          this.state.list.map(function (todo) {
-	            return _react2.default.createElement(_ToDo2.default, { todo: todo });
+	          this.state.list.map(function (todo, index) {
+	            return _react2.default.createElement(
+	              'div',
+	              { className: 'item' },
+	              _react2.default.createElement(_ToDo2.default, { key: index, todo: todo }),
+	              _react2.default.createElement(
+	                'span',
+	                { className: 'del', value: index, onClick: _this2.delItem },
+	                'x'
+	              )
+	            );
 	          })
 	        )
 	      );
@@ -21646,7 +21664,8 @@
 
 	    this.bindListeners({
 	      handleUpdateList: _toDoActions2.default.UPDATE_TO_DO,
-	      handleLiveUpdate: _toDoActions2.default.UPDATE_LIVE
+	      handleLiveUpdate: _toDoActions2.default.UPDATE_LIVE,
+	      handleDelete: _toDoActions2.default.DELETE_TO_DO
 	    });
 	  }
 
@@ -21665,6 +21684,11 @@
 	      this.state.list.push(value);
 	      this.state.current = "";
 	      console.log("list: " + this.state.list);
+	    }
+	  }, {
+	    key: 'handleDelete',
+	    value: function handleDelete(value) {
+	      console.log(value);
 	    }
 	  }]);
 
@@ -21698,6 +21722,11 @@
 	  }, {
 	    key: 'updateLive',
 	    value: function updateLive(value) {
+	      return value;
+	    }
+	  }, {
+	    key: 'deleteToDo',
+	    value: function deleteToDo(value) {
 	      return value;
 	    }
 	  }]);

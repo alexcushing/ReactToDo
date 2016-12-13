@@ -10,6 +10,7 @@ class ToDoInput extends Component {
         this.onChange = this.onChange.bind(this);
         this.updateTodo = this.updateTodo.bind(this);
         this.liveAdd = this.liveAdd.bind(this);
+        this.delItem = this.delItem.bind(this);
     }
 
   componentDidMount() {
@@ -36,6 +37,11 @@ class ToDoInput extends Component {
     ToDoActions.updateToDo(val)
   }
 
+  delItem(e) {
+    console.log("in delete", this.props.index);
+    ToDoActions.deleteToDo("test")
+  }
+
   render() {
     return (
       <div className="ToDoInput">
@@ -46,9 +52,12 @@ class ToDoInput extends Component {
         </form>
         <ul className="toDoListUnordered">
         {
-         this.state.list.map((todo) => {
+         this.state.list.map((todo, index) => {
              return (
-                 <ToDo todo={todo} />
+               <div className="item">
+                 <ToDo key={index} todo={todo} />
+                 <span className="del" value={index} onClick={this.delItem}>x</span>
+               </div>
              );
          })
      }

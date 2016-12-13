@@ -33,6 +33,7 @@
 
 .eachItem{
   margin: 10px;
+    margin-left: 0;
   padding: 10px;
   border: 0px;
   border-bottom: .5px solid black;

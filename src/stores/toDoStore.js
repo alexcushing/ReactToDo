@@ -21,6 +21,7 @@ class ToDoStore {
     let currArray = []
     currArray.push(value)
     this.state.list.push(value)
+    this.state.current = ""
     console.log("list: " + this.state.list);
   }
 }

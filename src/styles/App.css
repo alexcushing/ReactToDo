@@ -68,11 +68,6 @@ input{
   text-decoration: none;
 }
 
-.item{
-  display: flex;
-  vertical-align: middle;
-  align-items: center;
-}
 .toDoListUnordered{
   list-style: decimal;
   padding: 20px;
@@ -81,4 +76,10 @@ input{
   overflow-x: auto;
   margin: 0 auto;
   text-align: justify;
+}
+
+.flex{
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
 }

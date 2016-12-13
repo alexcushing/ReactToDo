@@ -30,7 +30,7 @@ class ToDo extends Component {
 
   render() {
     return (
-        <div>
+        <div className="flex">
         <li className="eachItem">{this.props.todo}</li>
         <span className="del" onClick={this.delItem}>x</span>
         </div>

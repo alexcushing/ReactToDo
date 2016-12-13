@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import ToDoStore from './stores/toDoStore'
-import ToDoActions from './actions/toDoActions'
-import ToDo from './ToDo'
+import ToDoStore from './stores/toDoStore';
+import ToDoActions from './actions/toDoActions';
+import ToDo from './ToDo';
 
 class ToDoInput extends Component {
   constructor(props){
@@ -36,6 +36,11 @@ class ToDoInput extends Component {
     ToDoActions.updateToDo(val)
   }
 
+  delItem(e) {
+    console.log("in delete", this.props.index);
+    ToDoActions.deleteToDo("test")
+  }
+
   render() {
     return (
       <div className="ToDoInput">
@@ -46,9 +51,11 @@ class ToDoInput extends Component {
         </form>
         <ul className="toDoListUnordered">
         {
-         this.state.list.map((todo) => {
+         this.state.list.map((todo, index) => {
              return (
-                 <ToDo todo={todo} />
+               <div className="item">
+                 <ToDo key={index} del={index} todo={todo} />
+               </div>
              );
          })
      }

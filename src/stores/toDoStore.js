@@ -7,7 +7,8 @@ class ToDoStore {
 
     this.bindListeners({
       handleUpdateList: ToDoActions.UPDATE_TO_DO,
-      handleLiveUpdate: ToDoActions.UPDATE_LIVE
+      handleLiveUpdate: ToDoActions.UPDATE_LIVE,
+      handleDelete: ToDoActions.DELETE_TO_DO
     });
   }
 
@@ -23,6 +24,13 @@ class ToDoStore {
     this.state.list.push(value)
     this.state.current = ""
     console.log("list: " + this.state.list);
+  }
+
+  handleDelete(value){
+       console.log("store" + value)
+      this.state.list.splice(value, 1)
+      console.log(this.state.list)
+        console.log(value);
   }
 }
 

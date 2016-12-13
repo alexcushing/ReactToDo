@@ -32,16 +32,21 @@
 }
 
 .eachItem{
-  background-color: white;
   margin: 10px;
   padding: 10px;
-  border-radius: 10px;
-  border: .5px #5998ff solid;
+  border: 0px;
+  border-bottom: .5px solid black;
 }
 
 input{
   margin: 5px;
   padding: 5px;
+}
+
+.del{
+  color: red;
+  display: inline;
+  cursor: pointer;
 }
 
 .btn {
@@ -62,6 +67,7 @@ input{
   background: #3cb0fd;
   text-decoration: none;
 }
+
 .toDoListUnordered{
   list-style: decimal;
   padding: 20px;
@@ -70,4 +76,10 @@ input{
   overflow-x: auto;
   margin: 0 auto;
   text-align: justify;
+}
+
+.flex{
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
 }

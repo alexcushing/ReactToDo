@@ -7,6 +7,10 @@ class ToDoActions {
   updateLive(value) {
     return value;
   }
+  deleteToDo(value) {
+      console.log("action" + value)
+    return value;
+  }
 
 }
 

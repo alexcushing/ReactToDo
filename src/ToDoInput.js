@@ -58,7 +58,7 @@ class ToDoInput extends Component {
                </div>
              );
          })
-     }
+    }
    </ul>
       </div>
     );

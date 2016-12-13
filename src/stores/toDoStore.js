@@ -25,8 +25,6 @@ class ToDoStore {
     handlelEdit(value){
       this.state.list.splice(value[1], 1, value[0])
       console.log("store val: ", value[0])
-      console.log("store index: ", value[1])
-       this.state.list.splice(value[1], 1,value[0])
       console.log(value)
     }
 

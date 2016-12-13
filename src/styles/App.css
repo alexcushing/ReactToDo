@@ -65,7 +65,9 @@ input{
 .toDoListUnordered{
   list-style: decimal;
   padding: 20px;
-  width: 300px;
+  width: 200px;
+  text-overflow: ellipsis;
+  overflow-x: auto;
   margin: 0 auto;
   text-align: justify;
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import ToDoStore from './stores/toDoStore'
-import ToDoActions from './actions/toDoActions'
-import ToDo from './ToDo'
+import ToDoStore from './stores/toDoStore';
+import ToDoActions from './actions/toDoActions';
+import ToDo from './ToDo';
 
 class ToDoInput extends Component {
   constructor(props){
@@ -10,7 +10,6 @@ class ToDoInput extends Component {
         this.onChange = this.onChange.bind(this);
         this.updateTodo = this.updateTodo.bind(this);
         this.liveAdd = this.liveAdd.bind(this);
-        this.delItem = this.delItem.bind(this);
     }
 
   componentDidMount() {
@@ -55,8 +54,7 @@ class ToDoInput extends Component {
          this.state.list.map((todo, index) => {
              return (
                <div className="item">
-                 <ToDo key={index} todo={todo} />
-                 <span className="del" value={index} onClick={this.delItem}>x</span>
+                 <ToDo key={index} del={index} todo={todo} />
                </div>
              );
          })

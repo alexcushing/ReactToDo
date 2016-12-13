@@ -8,6 +8,7 @@ class ToDoActions {
     return value;
   }
   deleteToDo(value) {
+      console.log("action" + value)
     return value;
   }
 

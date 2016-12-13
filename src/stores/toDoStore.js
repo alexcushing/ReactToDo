@@ -27,7 +27,10 @@ class ToDoStore {
   }
 
   handleDelete(value){
-    console.log(value);
+       console.log("store" + value)
+      this.state.list.splice(value, 1)
+      console.log(this.state.list)
+        console.log(value);
   }
 }
 

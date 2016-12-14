@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Muli');
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
 body{
   font-family: 'Muli', sans-serif;
 }
@@ -86,6 +87,32 @@ input{
 .btn:hover {
   background: #3cb0fd;
   text-decoration: none;
+}
+
+.stateVis{
+  font-family: 'Inconsolata', monospace;
+}
+
+.current-state{
+  padding-left: 30px;
+}
+
+.drag{
+  text-align: right;
+  color: grey;
+  font-size: 12px;
+}
+
+.example{
+  cursor: grab;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  display: inline-block;
+  text-align: justify;
 }
 
 .toDoListUnordered{

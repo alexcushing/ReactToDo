@@ -46,7 +46,7 @@ class ToDoInput extends Component {
     return (
       <div className="ToDoInput">
         <h2>To Do List</h2>
-        <h3 className="sizeSel">size: {this.state.list.length}</h3>
+        <h3 className="sizeSel">Size: {this.state.list.length}</h3>
         <form onSubmit={this.updateTodo}>
           <input type="text" onChange={this.liveAdd} value={this.state.current}/>
           <button type="submit" className="btn">Submit</button>

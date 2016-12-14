@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Muli');
-@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+@import url('https://fonts.googleapis.com/css?family=ABeeZee');
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
 body{
   font-family: 'Muli', sans-serif;
@@ -18,11 +18,13 @@ body{
   text-align: left;
   bottom: 10px;
   left: 20px;
+  font-family: 'ABeeZee', sans-serif;
+  font-weight: lighter;
   position: fixed;
 }
 
 h2{
-  font-family: 'Fredoka One', cursive;
+  font-family: 'ABeeZee', sans-serif;
   font-weight: lighter;
   font-size: 35px;
 }
@@ -52,17 +54,16 @@ h2{
   padding: 20px;
   margin: 20px auto;
   background-color: #f2f2f2;
-  border-radius: 10px;
   text-align: center;
 }
 
 .eachItem{
-    transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
   margin: 10px;
-    margin-left: 0;
+  margin-left: 0;
   padding: 10px;
   border: 0px;
-  border-bottom: .5px solid #FF8800;
+  border-bottom: .5px solid black;
   transition: all 0.15s ease-out;
 }
 
@@ -79,7 +80,7 @@ input{
 }
 
 .del{
-    transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
   color: red;
   display: inline;
   cursor: pointer;
@@ -125,13 +126,13 @@ input{
 
 .example{
   border-top: 4px solid #33b5e5;
-  border-bottom: 4px solid #ffbb33;
+  border-bottom: 4px solid #33b5e5;
   cursor: grab;
   background-color: #f2f2f2;
   padding: 20px;
   position: absolute;
-  left: 10px;
-  top: 10px;
+  right: 4%;
+  top: 6%;
   display: inline-block;
   text-align: justify;
 }

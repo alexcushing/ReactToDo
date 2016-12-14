@@ -12,7 +12,7 @@ class ToDo extends Component {
       this.delItem = this.delItem.bind(this);
     }
 
-    
+
     componentDidMount() {
     ToDoStore.listen(this.onChange);
   }
@@ -24,7 +24,7 @@ class ToDo extends Component {
   onChange(state) {
     this.setState(state);
   }
-    
+
   editItemRealTime(e) {
     ToDoActions.editToDo(e.target.value, this.props.del)
   }

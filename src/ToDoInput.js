@@ -73,12 +73,12 @@ class ToDoInput extends Component {
       this.state.list.map((todo, index) => {
           return (
             <div className="item">
-              <span className="current-state" key={index}>{todo}</span>
+              <span className="current-state-list" key={index}>{todo}</span>
             </div>
           );
       })
    }
-   <br />  {'}'}
+   {'}'}
    </div>
  </Draggable>
       </div>

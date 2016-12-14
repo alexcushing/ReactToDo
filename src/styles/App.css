@@ -95,6 +95,11 @@ input{
 
 .current-state{
   padding-left: 30px;
+  color: #CC0000;
+}
+.current-state-list{
+  padding-left: 30px;
+  color: #007E33;
 }
 
 .drag{
@@ -104,8 +109,9 @@ input{
 }
 
 .example{
+  border-top: 4px solid #33b5e5;
+  border-bottom: 4px solid #ffbb33;
   cursor: grab;
-  border-radius: 10px;
   background-color: #f2f2f2;
   padding: 20px;
   position: absolute;

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Muli');
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
 body{
   font-family: 'Muli', sans-serif;
 }
@@ -11,6 +12,13 @@ body{
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
+}
+
+.sizeSel{
+  text-align: left;
+  bottom: 10px;
+  left: 20px;
+  position: fixed;
 }
 
 h2{
@@ -54,8 +62,16 @@ h2{
     margin-left: 0;
   padding: 10px;
   border: 0px;
-  border-bottom: .5px solid black;
+  border-bottom: .5px solid #FF8800;
+  transition: all 0.15s ease-out;
 }
+
+.eachItem:focus{
+  border-bottom: .5px solid #00C851;
+  background-color: #ccffe0;
+  transition: all 0.15s ease-out;
+}
+
 
 input{
   margin: 5px;
@@ -78,7 +94,7 @@ input{
   font-family: Arial;
   color: #ffffff;
   font-size: 13px;
-  background: #3498db;
+  background: #33b5e5;
   padding: 6px 10px 6px 10px;
   text-decoration: none;
 }
@@ -86,6 +102,38 @@ input{
 .btn:hover {
   background: #3cb0fd;
   text-decoration: none;
+}
+
+.stateVis{
+  font-family: 'Inconsolata', monospace;
+}
+
+.current-state{
+  padding-left: 30px;
+  color: #CC0000;
+}
+.current-state-list{
+  padding-left: 30px;
+  color: #007E33;
+}
+
+.drag{
+  text-align: right;
+  color: grey;
+  font-size: 12px;
+}
+
+.example{
+  border-top: 4px solid #33b5e5;
+  border-bottom: 4px solid #ffbb33;
+  cursor: grab;
+  background-color: #f2f2f2;
+  padding: 20px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  display: inline-block;
+  text-align: justify;
 }
 
 .toDoListUnordered{

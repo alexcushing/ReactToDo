@@ -14,6 +14,13 @@ body{
   height: 80px;
 }
 
+.sizeSel{
+  text-align: left;
+  bottom: 10px;
+  left: 20px;
+  position: fixed;
+}
+
 h2{
   font-family: 'Fredoka One', cursive;
   font-weight: lighter;
@@ -55,8 +62,16 @@ h2{
     margin-left: 0;
   padding: 10px;
   border: 0px;
-  border-bottom: .5px solid black;
+  border-bottom: .5px solid #FF8800;
+  transition: all 0.15s ease-out;
 }
+
+.eachItem:focus{
+  border-bottom: .5px solid #00C851;
+  background-color: #ccffe0;
+  transition: all 0.15s ease-out;
+}
+
 
 input{
   margin: 5px;
@@ -79,7 +94,7 @@ input{
   font-family: Arial;
   color: #ffffff;
   font-size: 13px;
-  background: #3498db;
+  background: #33b5e5;
   padding: 6px 10px 6px 10px;
   text-decoration: none;
 }

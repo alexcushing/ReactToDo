@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+body{
+  font-family: 'Muli', sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -7,11 +13,21 @@
   height: 80px;
 }
 
+h2{
+  font-family: 'Fredoka One', cursive;
+  font-weight: lighter;
+  font-size: 35px;
+}
+
 .App-header {
   background-color: #222;
   height: 150px;
   padding: 20px;
   color: white;
+}
+
+.fa{
+
 }
 
 .App-intro {
@@ -24,14 +40,16 @@
 }
 
 .ToDoInput{
-  width: 400px;
+  width: 500px;
   padding: 20px;
   margin: 20px auto;
   background-color: #f2f2f2;
   border-radius: 10px;
+  text-align: center;
 }
 
 .eachItem{
+    transition: all 0.15s ease-out;
   margin: 10px;
     margin-left: 0;
   padding: 10px;
@@ -45,6 +63,7 @@ input{
 }
 
 .del{
+    transition: all 0.15s ease-out;
   color: red;
   display: inline;
   cursor: pointer;
@@ -70,16 +89,18 @@ input{
 }
 
 .toDoListUnordered{
+    transition: all 0.15s ease-out;
   list-style: decimal;
   padding: 20px;
-  width: 200px;
   text-overflow: ellipsis;
-  overflow-x: auto;
+  max-width: 100%;
   margin: 0 auto;
-  text-align: justify;
+  display: inline-block;
+  text-align: center;
 }
 
 .flex{
+    transition: all 0.15s ease-out;
     display: flex;
     vertical-align: middle;
     align-items: center;

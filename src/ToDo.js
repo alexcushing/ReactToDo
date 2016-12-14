@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ToDoStore from './stores/toDoStore'
-import Modal from 'react-bootstrap'
 import ToDoActions from './actions/toDoActions'
 
 
@@ -13,7 +12,7 @@ class ToDo extends Component {
       this.delItem = this.delItem.bind(this);
     }
 
-    
+
     componentDidMount() {
     ToDoStore.listen(this.onChange);
   }
@@ -25,7 +24,7 @@ class ToDo extends Component {
   onChange(state) {
     this.setState(state);
   }
-    
+
   editItemRealTime(e) {
     ToDoActions.editToDo(e.target.value, this.props.del)
   }

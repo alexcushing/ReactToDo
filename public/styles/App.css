@@ -127,7 +127,7 @@ input{
 .example{
   border-top: 4px solid #33b5e5;
   border-bottom: 4px solid #33b5e5;
-  cursor: grab;
+  cursor: grab !important;
   background-color: #f2f2f2;
   padding: 20px;
   position: absolute;
